@@ -1,5 +1,5 @@
 # The second work
-* [Repoter](http://www.jianshu.com/writer#/notebooks/16425043/notes/17415529/preview)
+* [Repoter](http://www.jianshu.com/p/7a7ad1ef253a)
 * The original program
 ```
 import turtle
