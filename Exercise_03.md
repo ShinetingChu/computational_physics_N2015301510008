@@ -1,4 +1,4 @@
-'''
+```
 import numpy as np
 import matplotlib.pyplot as pl
 
@@ -17,4 +17,4 @@ pl.plot(t,u)
 pl.xlim(0,11)
 pl.ylim(0,11)
 pl.show()
-'''
+```
