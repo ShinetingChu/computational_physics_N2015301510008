@@ -10,3 +10,6 @@
 * [code](http://note.youdao.com/noteshare?id=88d111a9e66c8a98de6df622208fc105)
 * [Report](http://note.youdao.com/noteshare?id=ccb9ce24d2fa093077fad092174e217c)
 * [picture](https://github.com/ShinetingChu/computational_physics_N2015301510008/blob/master/The%20third%20work.png)
+- [x] Exercise_04
+* [code]
+* [Report]
