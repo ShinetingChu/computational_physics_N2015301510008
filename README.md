@@ -11,5 +11,5 @@
 * [Report](http://note.youdao.com/noteshare?id=ccb9ce24d2fa093077fad092174e217c)
 * [picture](https://github.com/ShinetingChu/computational_physics_N2015301510008/blob/master/The%20third%20work.png)
 - [x] Exercise_04
-* [code]
-* [Report]
+* [code](http://note.youdao.com/noteshare?id=24a20686892b71f9e13103faf8f786fa)
+* [Report](http://note.youdao.com/noteshare?id=083a8d3fe0de7513fc677da0c4461646)
