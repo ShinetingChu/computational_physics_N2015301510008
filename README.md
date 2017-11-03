@@ -19,3 +19,8 @@
 - [x] Exercise_06
 * [code](http://note.youdao.com/noteshare?id=57e39e2028238204a9e29bdf95eb7117)
 * [Report](http://note.youdao.com/noteshare?id=f2c5d7f7eff267610a09133c70e9509b)
+- [x] Exercise_07
+* [code](http://note.youdao.com/noteshare?id=4bdc88e276617e8a20a9a5920a829598)
+* [Report](http://note.youdao.com/noteshare?id=adfb9ac89f077de6d3b4e56a93ef1053)
+
+
