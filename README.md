@@ -22,5 +22,8 @@
 - [x] Exercise_07
 * [code](http://note.youdao.com/noteshare?id=4bdc88e276617e8a20a9a5920a829598)
 * [Report](http://note.youdao.com/noteshare?id=adfb9ac89f077de6d3b4e56a93ef1053)
+- [x] Exercise_08
+* [code](http://note.youdao.com/noteshare?id=4f42bbab3b4cd5d1ab42d374c8e6bca4)
+* [Report](http://note.youdao.com/noteshare?id=cbf768fd50c462492ba87d4d5c0ed974)
 
 
