@@ -25,5 +25,7 @@
 - [x] Exercise_08
 * [code](http://note.youdao.com/noteshare?id=4f42bbab3b4cd5d1ab42d374c8e6bca4)
 * [Report](http://note.youdao.com/noteshare?id=cbf768fd50c462492ba87d4d5c0ed974)
+- [x] 期中作业
+* [视频及代码](http://note.youdao.com/noteshare?id=d14d1526f6eb8ce040f4c3f295c37128)
 
 
