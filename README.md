@@ -28,6 +28,6 @@
 - [x] 期中作业
 * [视频及代码](http://note.youdao.com/noteshare?id=d14d1526f6eb8ce040f4c3f295c37128)
 - [x] Exercise_09
-* [code](http://note.youdao.com/noteshare?id=4f42bbab3b4cd5d1ab42d374c8e6bca4)
-* [Report](http://note.youdao.com/noteshare?id=cbf768fd50c462492ba87d4d5c0ed974)
+* [code](http://note.youdao.com/noteshare?id=33cdd7138b7898d9580c9c3c89cb7506)
+* [Report](http://www.jianshu.com/p/be3c852028ab)(由于有道云笔记出bug了，只能暂时用简书代替，所以公式不能显示)
 
