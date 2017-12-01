@@ -1,0 +1,81 @@
+# Exercise_4.16
+### 朱先清 2015301510008
+## 1.课堂回顾
+第四章第一节主要是地球绕太阳做圆周运动，不考虑其他因素的影响。
+而第二节中考虑偏心率之后，在远日点速度最小，在近日点速度最大。可画出图像如下：
+![捕获.PNG](http://upload-images.jianshu.io/upload_images/7874645-d27975a247a57bac.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![水星进动2.PNG](http://upload-images.jianshu.io/upload_images/7874645-f975e65c663e198f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+第三节，水星进动，考虑广义相对论修正后为
+```math
+F_G\approx\frac{GM_SM_M}{r^2}(1+\frac{\alpha}{r^2})
+```
+利用欧拉迭代法可画出图像如下：
+![水星进动.PNG](http://upload-images.jianshu.io/upload_images/7874645-9d503127102f8264.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+第四节，我们考虑三体问题，在地球绕太阳转动时，加入木星对其的万有引力的影响。
+```math
+F_{EJ,x}=-\frac{GM_JM_E(x_e-x_j)}{r_{EJ}^2}
+
+F_{EJ,y}=-\frac{GM_JM_E(y_e-y_j)}{r_{EJ}^2}
+```
+可画出实际质量时，三体运动的轨迹：
+![实际质量.PNG](http://upload-images.jianshu.io/upload_images/7874645-65162fdd8f3e4cf4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 2.作业要求
+考虑太阳，地球，木星的三体问题，假设太阳不是静止不动的在原点，而是由三者的质心代替，给太阳一个初速度，使总动量为零，探究地球不同初值时的运动，和木星质量为实际质量的10,100,1000倍时的运动情况。
+
+## 3.解题思路
+* 关键为确定质心位置，分析各个行星的受力。
+求受力和加速度：
+以木星为例：
+```math
+F_x=-G\frac{M_jM_s(x_j-x_s)}{r_sj^3}-G\frac{M_jM_e(x_j-x_e)}{r_sj^3}
+
+F_y=-G\frac{M_jM_s(y_j-y_s)}{r_sj^3}-G\frac{M_jM_e(y_j-y_e)}{r_sj^3}
+```
+同理可得地球和太阳的受力。
+确定质心：
+设三个行星在一条直线上，太阳在左，地球和木星在右，距离为原始距离a(1+e)。利用质心公式，设太阳坐标为（-r_s），有：
+```math
+M_sr_s=M_e(a_e-r_s)+M_j(a_j-r_s)
+```
+可解得
+```math
+r_s=\frac{M_ea_e+M_ja_j}{M_s+M_e+M_j}
+```
+因而可得三者的初始坐标，而，地球和木星的初始速度为v_min，再利用总动量为零可以求得太阳的初始速度：
+```math
+v_{sy}=-\frac{M_jv_{jy}+M_ev_{ey}}{M_s}
+```
+![3-body.PNG](http://upload-images.jianshu.io/upload_images/7874645-83fe480631ec6a7a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 4.数据图像分析
+对于改变地球的初值：
+* 改变初始速度：
+当地球速度变为2倍时，已经脱离了太阳的束缚，当木星与地球没有距离十分近的时候，木星仍然继续绕太阳运动。速度更大时，也将脱离太阳系。
+![v_x_e=2times.PNG](http://upload-images.jianshu.io/upload_images/7874645-4771fb71a6eb5169.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 改变木星速度
+当木星速度变为原来两倍时，木星将脱离太阳束缚而飞出太阳系。
+![V_x_j=2times.PNG](http://upload-images.jianshu.io/upload_images/7874645-b3b827da116c20a9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 改变地球质量：
+10倍
+![100times.PNG](http://upload-images.jianshu.io/upload_images/7874645-dc56a739ca5bc539.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1000倍
+![M_e=1000times.PNG](http://upload-images.jianshu.io/upload_images/7874645-de26addf888c1715.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+100000倍
+![M_e=100000times.PNG](http://upload-images.jianshu.io/upload_images/7874645-f63d0e186abb581d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1000000倍
+![M_e=1000000times.PNG](http://upload-images.jianshu.io/upload_images/7874645-baca37967b78ffcf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+当地球的质量比太阳数量级小一时，使太阳的轨道产生较大影响，地球数量大于等于太阳的时，它们将远离质心。
+* 改变木星质量
+10倍
+![m_x_j=10times.PNG](http://upload-images.jianshu.io/upload_images/7874645-edf92a841c55dde8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+100倍
+![m_x_j=100times.PNG](http://upload-images.jianshu.io/upload_images/7874645-249bfc6c91663cd9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1000倍
+![m_x_j=1000times.PNG](http://upload-images.jianshu.io/upload_images/7874645-814108460e6504e3.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+从上面三幅图可以看出，当木星质量数量级远小于太阳的时，质心接近于在太阳处，当木星质量数量级比太阳小一时，质心将偏离太阳，三者都做圆周运动。当木星质量数量级大于等于太阳的时，三者将偏离质心，发散出去。
+
+## 5. 结论
+由于太阳的实际质量远大于地球和木星质量，因而假定太阳静止不动是可以近似成立的，此时地球和木星在稳定的轨道上做圆周运动。当地球或者木星速度增大时，他们都将脱离太阳的束缚，飞离太阳系。这些结论与实际都比较相符，可以认为本次计算模拟基本正确。
