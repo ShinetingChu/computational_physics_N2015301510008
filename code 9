@@ -1,0 +1,64 @@
+```
+import matplotlib.pyplot as pl
+import numpy as np
+
+a_e=1
+e_e=0.017
+M_e=6*10**24
+a_j=5.20
+e_j=0.048
+M_j=1000*1.9*10**27
+M_s=2*10**30
+x_s=[-0.5]
+y_s=[0]
+x_e=[x_s[0]+a_e*(e_e+1)]
+y_e=[0]
+v_e_x=[0]
+v_e_y=[2*np.pi*np.sqrt((1-e_e)*(1+M_e/M_s)/a_e/(1+e_e))]
+x_j=[x_s[0]+a_j*(e_j+1)]
+y_j=[0]
+v_j_x=[0]
+v_j_y=[2*np.pi*np.sqrt((1-e_j)*(1+M_j/M_s)/a_j/(1+e_j))]
+v_s_x=[0]
+v_s_y=[-(M_j*v_j_y[0]+M_e*v_e_y[0])/M_s]
+dt=0.001
+r_ej=[]
+r_sj=[]
+r_se=[]
+for i in range (0,20000):
+    r_ej.append(np.sqrt((x_e[i]-x_j[i])**2+(y_e[i]-y_j[i])**2))
+    r_sj.append(np.sqrt((x_s[i]-x_j[i])**2+(y_s[i]-y_j[i])**2))
+    r_se.append(np.sqrt((x_s[i]-x_e[i])**2+(y_s[i]-y_e[i])**2))
+    #earth
+    v_e_x.append(v_e_x[i]-4*np.pi**2*(x_e[i]-x_s[i])*dt/r_se[i]**3
+                 -4*np.pi**2*(M_j/M_s)*(x_e[i]-x_j[i])*dt/r_ej[i]**3)
+    x_e.append(x_e[i]+v_e_x[i+1]*dt)
+    v_e_y.append(v_e_y[i]-4*np.pi**2*(y_e[i]-y_s[i])*dt/r_se[i]**3
+                 -4*np.pi**2*(M_j/M_s)*(y_e[i]-y_j[i])*dt/r_ej[i]**3)
+    y_e.append(y_e[i]+v_e_y[i+1]*dt)
+    #jupiter
+    v_j_x.append(v_j_x[i]-4*np.pi**2*(x_j[i]-x_s[i])*dt/r_sj[i]**3
+                 -4*np.pi**2*(M_e/M_s)*(x_j[i]-x_e[i])*dt/r_ej[i]**3)
+    x_j.append(x_j[i]+v_j_x[i+1]*dt)
+    v_j_y.append(v_j_y[i]-4*np.pi**2*(y_j[i]-y_s[i])*dt/r_sj[i]**3
+                 -4*np.pi**2*(M_e/M_s)*(y_j[i]-y_e[i])*dt/r_ej[i]**3)
+    y_j.append(y_j[i]+v_j_y[i+1]*dt)
+    #sun
+    v_s_x.append(v_s_x[i]-4*np.pi**2*(M_j/M_s)*(x_s[i]-x_j[i])*dt/r_sj[i]**3
+                 -4*np.pi**2*(M_e/M_s)*(x_s[i]-x_e[i])*dt/r_se[i]**3)
+    x_s.append(x_s[i]+v_s_x[i+1]*dt)
+    v_s_y.append(v_s_y[i]-4*np.pi**2*(M_j/M_s)*(y_s[i]-y_j[i])*dt/r_sj[i]**3
+                 -4*np.pi**2*(M_e/M_s)*(y_s[i]-y_e[i])*dt/r_se[i]**3)
+    y_s.append(y_s[i]+v_s_y[i+1]*dt)
+    
+fig=pl.figure(figsize=(6,6),dpi=90) 
+pl.scatter(0,0,3,color='black')
+pl.plot(x_e,y_e,label='Earth')
+pl.plot(x_j,y_j,label='Jupiter')
+pl.plot(x_s,y_s,linewidth=3,label='Sun')
+pl.legend(loc='upper right')
+pl.xlabel('x(AU)')
+pl.ylabel('y(AU)')
+pl.title('3-body simulation Earth puls Jupiter')
+pl.show()   
+```
