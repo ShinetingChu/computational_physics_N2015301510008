@@ -30,4 +30,6 @@
 - [x] Exercise_09
 * [code](http://note.youdao.com/noteshare?id=33cdd7138b7898d9580c9c3c89cb7506)
 * [Report](http://www.jianshu.com/p/be3c852028ab)(由于有道云笔记出bug了，只能暂时用简书代替，所以公式不能显示)
-
+- [x] Exercise_10
+* [code](http://note.youdao.com/noteshare?id=25a7bf4bd8d74908369c80e676ca1b57)
+* [Report](http://note.youdao.com/noteshare?id=82df5c46794cdbffe1defb42dae0052f)
